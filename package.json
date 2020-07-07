@@ -1,0 +1,27 @@
+{
+  "name": "husky-git-emoji",
+  "version": "1.0.0",
+  "description": "A little command line tool that use husky to replace tag to emoji",
+  "bin": {
+    "hge-init": "./cli/init.js",
+    "hge-commit": "./cli/commit.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bigaston/husky-git-emoji.git"
+  },
+  "keywords": [
+    "git",
+    "emoji",
+    "husky"
+  ],
+  "author": "Bigaston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bigaston/husky-git-emoji/issues"
+  },
+  "homepage": "https://github.com/Bigaston/husky-git-emoji#readme"
+}
