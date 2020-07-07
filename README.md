@@ -30,5 +30,5 @@ Add this in your *package.json* file
 ```
 
 ## Conclusion
-This project in inspired by [git-emojis-hook](https://github.com/Buzut/git-emojis-hook)
+This project in inspired by [git-emojis-hook](https://github.com/Buzut/git-emojis-hook)  
 Created by Bigaston : [🐦 Twitter](https://twitter.com/Bigaston) | [💸 uTip](https://utip.io/Bigaston)
