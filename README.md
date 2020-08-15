@@ -12,7 +12,7 @@ Inside of your repository, you have 2 ways:
 
 ### No husky hooks for now
 ```
-hge-init
+npx hge-init
 ```
 
 This command is going to install the husky and the hook of husky-git-emoji
@@ -23,7 +23,7 @@ Add this in your *package.json* file
 {
     "husky": {
         "hooks": {
-            "commit-msg": "hge-commit"
+            "commit-msg": "npx hge-commit"
         }
     }
 }

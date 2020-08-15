@@ -13,7 +13,7 @@ if (fs.existsSync(path.join(process.cwd(), "./package.json"))) {
     
         package_json.husky = {}
         package_json.husky.hooks = {}
-        package_json.husky.hooks["commit-msg"] = "hge-commit";
+        package_json.husky.hooks["commit-msg"] = "npx hge-commit";
     
         console.log("> Save package.json")
         fs.writeFileSync(path.join(process.cwd(), "./package.json"), JSON.stringify(package_json, null, 4));
