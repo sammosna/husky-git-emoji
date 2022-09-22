@@ -1,5 +1,5 @@
 {
-  "name": "husky-git-emoji",
+  "name": "@sammosna/husky-git-emoji",
   "version": "1.0.1",
   "description": "A little command line tool that use husky to replace tag to emoji",
   "bin": {
