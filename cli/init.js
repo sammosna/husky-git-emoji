@@ -13,13 +13,17 @@ if (fs.existsSync(path.join(process.cwd(), "./package.json"))) {
     console.log("> Installing husky")
     child.exec(`${pm} install husky --save-dev`, {}, () => {
         let package_json = JSON.parse(fs.readFileSync(path.join(process.cwd(), "./package.json"), "utf8"));
-        if (!package_json["husky-git-emoji-version"] || package_json["husky-git-emoji-version"] !== version) {
-            
+        if (
+            !package_json["husky-git-emoji-version"]
+            || package_json["husky-git-emoji-version"] !== version
+            || !fs.existsSync(path.join(process.cwd(), "./.husky"))
+        ) {
+
             if (!process.env.husky_skip_init) child.execSync(`${pm} husky install`);
-            child.execSync(`${pm} husky add .husky/commit-msg "npx hge-commit"`);
-            
-            
-            
+            child.execSync(`${pm} husky add .husky/commit-msg "npx hge-commit \"\$1\""`);
+
+
+
             package_json["husky-git-emoji-version"] = version;
             console.log("> Save package.json")
             fs.writeFileSync(path.join(process.cwd(), "./package.json"), JSON.stringify(package_json, null, 4));
