@@ -11,17 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bigaston/husky-git-emoji.git"
+    "url": "git+https://github.com/sammosna/husky-git-emoji.git"
   },
   "keywords": [
     "git",
     "emoji",
     "husky"
   ],
-  "author": "Bigaston",
+  "author": "sammosna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bigaston/husky-git-emoji/issues"
+    "url": "https://github.com/sammosna/husky-git-emoji/issues"
   },
-  "homepage": "https://github.com/Bigaston/husky-git-emoji#readme"
+  "homepage": "https://github.com/sammosna/husky-git-emoji#readme"
 }
