@@ -17,5 +17,7 @@ message = message.replace("refactor:", "🚧  refactor: ");
 message = message.replace("style:", "💄  style: ");
 message = message.replace("test:", "✅  test: ");
 message = message.replace("tada:", "🎉  tada: ");
+message = message.replace("ver:", "🕒  ver: ");
+message = message.replace("wip:", "🚧  wip: ");
 
 fs.writeFileSync(process.argv[2], message)
