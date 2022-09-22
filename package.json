@@ -1,13 +1,14 @@
 {
     "name": "@sammosna/husky-git-emoji",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A little command line tool that use husky to replace tag to emoji",
     "bin": {
         "hge-init": "./cli/init.js",
         "hge-commit": "./cli/commit.js"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "node ./cli/postinstall.js"
     },
     "repository": {
         "type": "git",
