@@ -15,7 +15,7 @@ if (fs.existsSync(path.join(process.cwd(), "./package.json"))) {
         let package_json = JSON.parse(fs.readFileSync(path.join(process.cwd(), "./package.json"), "utf8"));
         if (!package_json["husky-git-emoji-version"] || package_json["husky-git-emoji-version"] !== version) {
             
-            child.execSync(`${pm} husky install`);
+            if (!process.env.husky_skip_init) child.execSync(`${pm} husky install`);
             child.execSync(`${pm} husky add .husky/commit-msg "npx hge-commit"`);
             
             

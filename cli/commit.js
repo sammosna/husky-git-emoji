@@ -1,8 +1,8 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
 const fs = require("fs");
 
-let message = fs.readFileSync(process.env.HUSKY_GIT_PARAMS, "utf8");
+let message = fs.readFileSync(process.argv[2], "utf8");
 
 console.log("> husky-git-emoji parse")
 
@@ -18,4 +18,4 @@ message = message.replace("style:", "💄  style: ");
 message = message.replace("test:", "✅  test: ");
 message = message.replace("tada:", "🎉  tada: ");
 
-fs.writeFileSync(process.env.HUSKY_GIT_PARAMS, message)
+fs.writeFileSync(process.argv[2], message)
