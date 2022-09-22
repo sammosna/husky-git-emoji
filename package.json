@@ -1,27 +1,35 @@
 {
-  "name": "@sammosna/husky-git-emoji",
-  "version": "1.0.1",
-  "description": "A little command line tool that use husky to replace tag to emoji",
-  "bin": {
-    "hge-init": "./cli/init.js",
-    "hge-commit": "./cli/commit.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sammosna/husky-git-emoji.git"
-  },
-  "keywords": [
-    "git",
-    "emoji",
-    "husky"
-  ],
-  "author": "sammosna",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sammosna/husky-git-emoji/issues"
-  },
-  "homepage": "https://github.com/sammosna/husky-git-emoji#readme"
+    "name": "@sammosna/husky-git-emoji",
+    "version": "1.0.1",
+    "description": "A little command line tool that use husky to replace tag to emoji",
+    "bin": {
+        "hge-init": "./cli/init.js",
+        "hge-commit": "./cli/commit.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sammosna/husky-git-emoji.git"
+    },
+    "keywords": [
+        "git",
+        "emoji",
+        "husky"
+    ],
+    "author": "sammosna",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sammosna/husky-git-emoji/issues"
+    },
+    "homepage": "https://github.com/sammosna/husky-git-emoji#readme",
+    "devDependencies": {
+        "husky": "^8.0.1"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "npx hge-commit"
+        }
+    }
 }

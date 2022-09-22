@@ -3,11 +3,15 @@
 const fs = require("fs");
 const path = require("path");
 const child = require("child_process");
+const pm = require("../inc/pm")();
+
+
+console.log(`> using ${pm} to install dependencies`);
 
 if (fs.existsSync(path.join(process.cwd(), "./package.json"))) {
     console.log("> package.json found!")
     console.log("> Installing husky")
-    child.exec('npm install husky --save-dev', {}, () => {
+    child.exec(`${pm} install husky --save-dev`, {}, () => {
         console.log("> Add husky config ton package.json")
         let package_json = JSON.parse(fs.readFileSync(path.join(process.cwd(), "./package.json"), "utf8"));
     
